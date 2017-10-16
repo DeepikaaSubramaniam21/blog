@@ -1,0 +1,17 @@
+{{#modal-dialog translucentOverlay=true onClickOverlay=(action 'closeModal')}}
+  <h1 class="page-header"> {{title}} </h1>
+  <div>
+    <p> 
+      {{input type="text" placeholder="E-mail address" class="text-field"}} 
+    </p>
+    <p> 
+      {{input type="password" placeholder="Password" class="text-field"}}
+    </p>
+    <p>
+      <button {{action 'closeModal'}} class="primary-button btn-l">{{title}}</button>
+      {{#if isLogin}}
+        <span class="signup-link"> {{#link-to 'sign-up'}}or SignUp{{/link-to}} </span>
+      {{/if}}
+    </p>
+  </div>
+{{/modal-dialog}}

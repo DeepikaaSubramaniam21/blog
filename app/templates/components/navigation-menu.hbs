@@ -1,0 +1,11 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="menu-collapse">
+      <ul class="nav navbar-nav">
+        {{#each options as |option|}}
+          <li>{{#link-to option.route}}{{option.name}}{{/link-to}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</nav>
